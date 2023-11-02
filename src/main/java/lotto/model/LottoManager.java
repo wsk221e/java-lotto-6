@@ -3,7 +3,7 @@ package lotto.model;
 import camp.nextstep.edu.missionutils.Randoms;
 import java.util.ArrayList;
 import java.util.List;
-import lotto.Domain.Lotto;
+import lotto.domain.Lotto;
 
 public class LottoManager {
     private final List<Lotto> tickets = new ArrayList<>();
