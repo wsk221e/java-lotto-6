@@ -3,6 +3,7 @@ package lotto.domain;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import lotto.dto.LottoDTO;
 
 public class Lotto {
     private final List<Integer> numbers;
@@ -10,6 +11,12 @@ public class Lotto {
     public Lotto(List<Integer> numbers) {
         validate(numbers);
         this.numbers = numbers;
+    }
+
+    public LottoDTO toDTO() {
+        LottoDTO lottoDTO = new LottoDTO(numbers);
+
+        return lottoDTO;
     }
 
 
@@ -27,5 +34,4 @@ public class Lotto {
     }
 
     // TODO: 추가 기능 구현
-    // testcode
 }
