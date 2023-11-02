@@ -50,5 +50,8 @@ public class LottoManager {
     protected int getTicketsSize() {
         return this.tickets.size();
     }
+    protected void addTickets(Lotto testTicket){
+        tickets.add(testTicket);
+    }
 
 }
