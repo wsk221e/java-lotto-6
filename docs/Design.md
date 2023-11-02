@@ -1,0 +1,15 @@
+# 프로그램 구성요소
+- View
+  - InputView: 사용자의 입력을 받는다.
+  - OutputView: 결과를 사용자에게 보여준다. 
+- Controller
+  - View와 Model 사이에서 데이터의 적절한 교환이 이루어지도록 한다.
+- Model 
+  - Lotto: 로또 번호를 생성하고 관리한다.
+    - 기존 클래스 이용
+    - numbers의 접근 제어자인 private을 변경할 수 없다.
+    - Lotto에 필드(인스턴스 변수)를 추가할 수 없다.
+    - Lotto의 패키지 변경은 가능하다.
+  - Prize: 당첨금을 생성하고 관리한다.
+- etc.
+  - Validator: 사용자의 입력에 대해 유효성 검사를 수행한다.
