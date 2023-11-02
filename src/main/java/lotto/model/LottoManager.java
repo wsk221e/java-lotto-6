@@ -4,10 +4,10 @@ import camp.nextstep.edu.missionutils.Randoms;
 import java.util.ArrayList;
 import java.util.List;
 import lotto.domain.Lotto;
+import lotto.dto.LottoDTO;
 
 public class LottoManager {
     private final List<Lotto> tickets = new ArrayList<>();
-
 
 
     public void generateLottoTickets(int money) {
@@ -21,6 +21,18 @@ public class LottoManager {
 
     }
 
+    public List<LottoDTO> getLottoTickets() {
+        List<LottoDTO> ticketsDTO = new ArrayList<>();
+
+        for (Lotto ticket : tickets){
+            LottoDTO ticketDTO = ticket.toDTO();
+
+            ticketsDTO.add(ticketDTO);
+        }
+        return ticketsDTO;
+    }
+
+
     private int calculateTicketAmount(int money){
         int amount = money/1000;
 
@@ -32,6 +44,7 @@ public class LottoManager {
 
         return numbers;
     }
+
 
     // testcode
     protected int getTicketsSize() {

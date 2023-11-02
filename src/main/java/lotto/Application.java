@@ -9,5 +9,6 @@ public class Application {
         Controller controller = new Controller();
 
         controller.buyLotto();
+        controller.displayLottoNumbers();
     }
 }
