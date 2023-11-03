@@ -20,8 +20,6 @@ public class PrizeManager {
 
     public void calculateTotalPrize() {
         checkLottoTicket();
-        System.out.println("\ntest: 상금 목록 출력");
-        System.out.println(prizes);
     }
 
 
@@ -74,6 +72,12 @@ public class PrizeManager {
             return Prize.FIFTH.getPrize();
         }
         return 0;
+    }
+
+
+    // testcode
+    protected List<Integer> getPrizes() {
+        return this.prizes;
     }
 
 }
