@@ -10,5 +10,8 @@ public class Application {
 
         controller.buyLotto();
         controller.displayLottoNumbers();
+        controller.inputPrizingNumber();
+
     }
+
 }

@@ -11,14 +11,21 @@ public class Controller {
     private OutputView output = new OutputView();
     private LottoManager lotto = new LottoManager();
 
+
     public void buyLotto() {
         int money = input.getUserInputMoney();
         lotto.generateLottoTickets(money);
     }
 
-    public void displayLottoNumbers(){
+    public void displayLottoNumbers() {
         List<LottoDTO> tickets = lotto.getLottoTickets();
         output.displayLottoNumbers(tickets);
+    }
+
+    public void inputPrizingNumber() {
+        List<Integer> winningNumbers = input.getPrizingNumbers();
+
+        lotto.getTotalPrize(winningNumbers);
     }
 
 }
